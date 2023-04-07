@@ -1,0 +1,128 @@
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/functions";
+@import "utils/fonts";
+@import "utils/sprite";
+@import "utils/animations";
+@import "utils/fluid-font";
+@import "utils/typo";
+//@include sprites($spritesheet-sprites);
+:root {
+    --vh: 1vh;
+}
+
+.gradient-ball {
+    pointer-events: none;
+}
+
+html {
+    font-family: $primary-font, Arial, serif;
+    font-size: 16px;
+    height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+// * {
+//     cursor: none;
+// }
+
+a,
+button,
+details,
+summary {
+    cursor: pointer;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+p,
+ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+input {
+    border-radius: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+textarea,
+video {
+    vertical-align: middle;
+}
+
+textarea {
+    resize: none;
+}
+
+section {
+    position: relative;
+}
+
+button,
+input,
+select {
+    outline: none;
+}
+
+.body {
+    width: 100%;
+
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+.main {
+    overflow: hidden;
+    position: relative;
+}
+//Модули
+@import "modules/modules";

@@ -1,0 +1,139 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon_16x16.png")
+
+        link(rel="mask-icon" href="/favicon_32x32.svg" color="#5bbad5")
+        link(rel="icon" href="/favicon_32x32.svg" sizes="any" type="image/svg+xml") 
+        meta(name="theme-color" content="#ffffff")
+    body.body
+        a(href="cart.html" target="_self") CART
+        section.catalog
+            h1.catalog__title 
+                span.catalog__title-lg wine stage 
+                span.catalog__title-sm — это издание обо всех сторонах мира Fine & Rare, с детальным анализом тенденций, дегустациями образцов с лучших терруаров и от лучших производителей, рекомендациями по составлению коллекций и инвестициям и многом другом.
+            ul.catalog__list
+                li.catalog__item
+                    .catalog__info(data-price="1090 ₽")
+                        .catalog__visual(data-type="single")
+                            img(src="static/images/content/jour-3.jpg" width="" height="" alt="")
+                        h3.catalog__name wine stage #2
+                        p.catalog__preview «Супервторые» вина Бордо, самое интересное из Шатонёф-дю-Пап, гид Michelin глазами тайного критика. 
+                        .catalog__details
+                            p.catalog__details-description1 wine stage №2 стал первым изданием после перезапуска. В нем мы собрали много интересного: какими будут тосканские крю, почему не все бордоские Вторые — «супервторые», что искать в Шатонёф-дю-Пап, какие новосветские приемы используются в Бордо и какие бургундские вина пить каждый день.
+                            p.catalog__details-description2 А также выясняем, все ли 100-балльные оценки винных критиков одинаковы и что представляет собой гид Michelin изнутри (от самого настоящего фуд-критика, оценивающего для него рестораны). 
+                    span.catalog__price 1090 ₽
+                    .catalog__checkout
+                        .catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-1" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                        button(type="submit").catalog__submit В корзину
+                
+                li.catalog__item
+                    .catalog__info(data-price="1090 ₽")
+                        .catalog__visual(data-type="single")
+                            img(src="static/images/content/jour-2.jpg" width="" height="" alt="")
+                        h3.catalog__name wine stage #3
+                        p.catalog__preview Что ждет классификацию в Сент-Эмильоне, премиальные альтернативы шардоне и пино, дегустация престижных кювет в магнумах и инсайдамы подготовки конкурса «Декантера».
+                        .catalog__details
+                            p.catalog__details-description1 wine stage №3 стал первым изданием после перезапуска. В нем мы собрали много интересного: какими будут тосканские крю, почему не все бордоские Вторые — «супервторые», что искать в Шатонёф-дю-Пап, какие новосветские приемы используются в Бордо и какие бургундские вина пить каждый день.
+                            p.catalog__details-description2 А также выясняем, все ли 100-балльные оценки винных критиков одинаковы и что представляет собой гид Michelin изнутри (от самого настоящего фуд-критика, оценивающего для него рестораны). 
+                    span.catalog__price 1090 ₽
+
+                    .catalog__checkout
+                        .catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-2" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                        button(type="submit").catalog__submit В корзину
+
+                li.catalog__item
+                    .catalog__info(data-price="1090 ₽")
+                        .catalog__visual(data-type="single")
+                            img(src="static/images/content/jour-1.jpg" width="" height="" alt="")
+                        h3.catalog__name wine stage #4
+                        p.catalog__preview 17 отличных шпетбургундеров, отдельные виноградники Нового света, испанский Гредос и самые интересные производители Долины Уилламетт.
+                        .catalog__details
+                            p.catalog__details-description1 wine stage №4 стал первым изданием после перезапуска. В нем мы собрали много интересного: какими будут тосканские крю, почему не все бордоские Вторые — «супервторые», что искать в Шатонёф-дю-Пап, какие новосветские приемы используются в Бордо и какие бургундские вина пить каждый день.
+                            p.catalog__details-description2 А также выясняем, все ли 100-балльные оценки винных критиков одинаковы и что представляет собой гид Michelin изнутри (от самого настоящего фуд-критика, оценивающего для него рестораны). 
+                    span.catalog__price 1090 ₽
+                    
+                    .catalog__checkout
+                        .catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-3" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                        button(type="submit").catalog__submit В корзину
+
+                li.catalog__item
+                    .catalog__info(data-price="3190 ₽")
+                        .catalog__visual(data-type="triple")
+                            ul
+                                li.active
+                                    img(src="static/images/content/jour-1.jpg" width="" height="" alt="")
+                                li
+                                    img(src="static/images/content/jour-2.jpg" width="" height="" alt="")
+                                li
+                                    img(src="static/images/content/jour-3.jpg" width="" height="" alt="")
+                        h3.catalog__name Архив журналов
+                        p.catalog__preview Архив wine stage #2, 3, 4 
+                        .catalog__details
+                            p.catalog__details-description1 Архив wine stage #2, 3, 4 
+                            p.catalog__details-description2 
+                    span.catalog__price 3190 ₽
+                    .catalog__checkout
+                        .catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-4" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                        button(type="submit").catalog__submit В корзину
+            .catalog__about
+                p.catalog__about-text Если стоимость доставки до Вашего города не рассчитывается, обратитесь за индивидуальным расчетом, написав письмо на почту winestage@simple.ru. Просчет может занять несколько дней, но мы вам обязательно ответим. Также забрать издания можно будет из ближайших к вам винотек SimpleWine.
+                span.catalog__about-note *wine stage — серия книг на русском языке. Выходит несколько раз в год.
+            // Попап для элементов
+            .catalog-popup
+                .catalog-popup__wrapper#destination
+                    button(type="button").catalog-popup__closer
+                    .catalog-popup__info
+                        h3.catalog-popup__name
+                        span.catalog-popup__price
+                        .catalog-popup__visual
+                            
+                        p.catalog-popup__description.description1
+                        p.catalog-popup__description.description2
+                    .catalog-popup__bottom.catalog__checkout
+                        .catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-4" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                        button(type="submit").catalog__submit В корзину
+                        p.catalog__warn Вы можете приобрести онлайн не более 6 wine stage. Если вы хотите заказать больше, пожалуйста, напишите на winestage@simple.ru 
+            // Плашка предупреждения
+            .catalog-warn
+                .catalog-warn__wrapper
+                    button(type="button").catalog-warn__closer
+                    p Вы можете приобрести онлайн не более 6 wine stage. Если вы хотите заказать больше, пожалуйста, напишите на winestage@simple.ru
+            //- Cookies
+            .popup-policy
+                p.popup-policy__description Мы используем cookie для персонализации сервисов и удобства пользователей. Ознакомьтесь с нашей 
+                    a(href="" target="_target") политикой
+                    |  конфиденциальности.
+                button(type="button").popup-policy__closer Согласен
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/main.js")
+        block script

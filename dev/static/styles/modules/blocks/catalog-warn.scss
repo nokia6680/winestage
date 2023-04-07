@@ -1,0 +1,73 @@
+.catalog-warn {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    background-color: rgba(217, 217, 217, 0.6);
+
+    @include flex-setting(column, flex-end, center);
+    padding-bottom: toRem(40);
+
+    z-index: 999;
+
+    display: none;
+
+    &.active {
+        display: flex;
+    }
+
+    &__wrapper {
+        position: relative;
+
+        width: calc(100% - 20px);
+
+        @include flex-setting(column, flex-start, flex-start);
+
+        background-color: $white;
+        border-radius: toRem(10);
+
+        padding: toRem(40) toRem(30);
+    }
+
+    &__closer {
+        position: absolute;
+        width: toRem(20);
+        height: toRem(20);
+        background-color: transparent;
+        border: none;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 75%;
+        background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.15615 7.99993L15.0155 1.01556C15.1137 0.899484 15.0312 0.723145 14.8794 0.723145H13.0981C12.9932 0.723145 12.8928 0.770019 12.8236 0.850377L7.99097 6.61154L3.15838 0.850377C3.09142 0.770019 2.99097 0.723145 2.88383 0.723145H1.10258C0.950793 0.723145 0.868203 0.899484 0.966418 1.01556L6.82579 7.99993L0.966418 14.9843C0.944417 15.0102 0.930302 15.0418 0.92575 15.0755C0.921197 15.1091 0.926397 15.1434 0.940733 15.1742C0.955069 15.205 0.977939 15.231 1.00663 15.2492C1.03532 15.2673 1.06862 15.2769 1.10258 15.2767H2.88383C2.98874 15.2767 3.08919 15.2298 3.15838 15.1495L7.99097 9.38832L12.8236 15.1495C12.8905 15.2298 12.991 15.2767 13.0981 15.2767H14.8794C15.0312 15.2767 15.1137 15.1004 15.0155 14.9843L9.15615 7.99993Z' fill='black'/%3E%3C/svg%3E");
+
+        top: toRem(20);
+        right: toRem(20);
+    }
+
+    p {
+        @include font-setting($primary-font, toRem(14), toRem(17), 300, $red);
+        letter-spacing: 2px;
+        text-align: center;
+    }
+}
+
+@include min-screen(1366px) {
+    .catalog-warn {
+        &__wrapper {
+            width: 100%;
+            max-width: toRem(700);
+            padding: toRem(20) toRem(60) toRem(20) toRem(40);
+        }
+
+        p {
+            font-size: toRem(16);
+            line-height: toRem(19);
+            text-align: left;
+        }
+    }
+}

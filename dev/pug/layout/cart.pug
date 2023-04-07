@@ -1,0 +1,68 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        title #{title}
+        <!--[if IE]>
+        meta(http-equiv='X-UA-Compatible', content="IE = edge")
+        <![endif]-->
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        meta(name="keywords" content="")
+        link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+        link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+        link(rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="/favicon_16x16.png")
+        link(rel="manifest" href="/manifest.json")
+        link(rel="mask-icon" href="/favicon_32x32.svg" color="#5bbad5")
+        link(rel="icon" href="/favicon_32x32.svg" sizes="any" type="image/svg+xml") 
+        meta(name="theme-color" content="#ffffff")
+    body.body
+        section.cart
+            h1.cart__title Корзина
+            
+            ul.cart__list
+                li.cart__item.limited
+                    button(type="button").cart__delete
+                    img(src="static/images/content/jour-1.jpg" width="" height="" alt="").cart__image
+                    .cart__info
+                        h2.cart__name Архив wine stage
+                        span.cart__price 2234 ₽
+                    
+                        .cart__counter.catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-1" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                    p.cart__warn Вы можете приобрести онлайн не более 6 wine stage. Если вы хотите заказать больше, пожалуйста, напишите на winestage@simple.ru 
+                
+                li.cart__item
+                    button(type="button").cart__delete
+                    img(src="static/images/content/jour-1.jpg" width="" height="" alt="").cart__image
+                    .cart__info
+                        h2.cart__name wine stage #2
+                        span.cart__price 3190 ₽
+                        
+                        .cart__counter.catalog__count
+                            button(type="button").catalog__count-btn.js-decrease
+                            input(type="number" name="count" id="count-1" placeholder="0").catalog__count-input
+                            button(type="button").catalog__count-btn.js-increase
+                    p.cart__warn Вы можете приобрести онлайн не более 6 wine stage. Если вы хотите заказать больше, пожалуйста, напишите на winestage@simple.ru 
+            .cart__final        
+                ul.cart__data
+                    li.cart__line
+                        span.cart__line-title Архив wine stage2: 
+                        span.cart__line-price 10234 ₽
+                    li.cart__line
+                        span.cart__line-title wine stage #2: 
+                        span.cart__line-price 3190 ₽
+                    li.cart__line.cart__line--final
+                        span.cart__line-name Итого*:
+                        span.cart__line-total 11230 ₽
+                button(type="submit").cart__submit Купить wine stage
+                p.cart__note *Обратите внимание, что сумма указана без учета стоимости доставки. Стоимость доставки зависит от Вашего региона и рассчитывается на этапе оформления заказа, согласно тарифам. Вы также можете оформить бесплатную доставку до ближайшей винотеки SimpleWine, выбрав самовывоз на этапе оформления заказа.
+        script(src="static/js/vendor/jquery-3.3.1.min.js")
+        script(src="static/js/main.js")
+        block script

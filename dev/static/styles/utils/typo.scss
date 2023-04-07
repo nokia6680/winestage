@@ -1,0 +1,31 @@
+.title {
+    @include font-setting($primary-font, toRem(28), toRem(32), 500, $dark);
+    text-align: left;
+
+    @include min-screen(1200px) {
+        font-size: toRem(44);
+        line-height: toRem(51);
+    }
+}
+
+.section-title {
+    @include font-setting($primary-font, toRem(26), toRem(32), 500, $dark);
+    text-align: left;
+
+    @include min-screen(1200px) {
+        font-size: toRem(40);
+        line-height: toRem(44);
+    }
+}
+
+.small-title {
+    @include font-setting($primary-font, toRem(14), toRem(17), 500, $dark);
+    text-align: left;
+    letter-spacing: 0.02em;
+
+    @include min-screen(1200px) {
+        font-size: toRem(18);
+        line-height: toRem(22);
+        max-width: 70%;
+    }
+}
